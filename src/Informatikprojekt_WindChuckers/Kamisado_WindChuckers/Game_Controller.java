@@ -16,7 +16,7 @@ public class Game_Controller extends Application {
 	protected Game_Controller (Game_Model game_Model, Game_View game_View){
 		this.game_Model = game_Model;
 		this.game_View  = game_View; 
-		TokenClicker tokenClicker = new TokenClicker(); // unser EventHandler für die Tokens
+		TokenClicker tokenClicker = new TokenClicker(); // unser EventHandler fï¿½r die Tokens
 		
 		
 		// MenuBar
@@ -32,7 +32,7 @@ public class Game_Controller extends Application {
 			}});
 		
 		// GameScene 
-		game_Model.getPlayer1().setOnTurn(true); // Player 1 soll beginnen dürfen
+		game_Model.getPlayer1().setOnTurn(true); // Player 1 soll beginnen dï¿½rfen
 	
 		// Tokens
 		for(Token_Button p1 : game_View.getTokensP1()){
@@ -46,7 +46,7 @@ public class Game_Controller extends Application {
 			game_View.getPrimaryStage().setScene(game_View.getSceneGame());
 			game_View.getBorderpaneGame().setTop(game_View.getMenubar());
 		});
-		game_View.getButtonHauptmenü().setOnAction((event)->{
+		game_View.getButtonHauptmenue().setOnAction((event)->{
 			game_View.getPrimaryStage().close();
 			game_View.getBorderpaneStart().setTop(game_View.getMenubar());
 			game_View.getPrimaryStage().setScene(game_View.getSceneStart());
@@ -64,7 +64,7 @@ public class Game_Controller extends Application {
 		
 		}
 
-	// EventHandler für die Tokens //////////////////////////////////////////////////////////////////////////////////////////////////
+	// EventHandler fï¿½r die Tokens //////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	protected class TokenClicker implements EventHandler<ActionEvent>{
 		@Override
@@ -76,17 +76,17 @@ public class Game_Controller extends Application {
 				p1.setDisable(true);
 				}
 		
-			// Alle möglichen Felder für Player 1 sollen aktiv werden
+			// Alle mï¿½glichen Felder fï¿½r Player 1 sollen aktiv werden
 			game_View.setSpielfelder(game_Model.getPossibleFieldsP1(tokenClick, game_View.getSpielfelder()));
 			
-			// Das aktive Token von Player 1 soll aktiv bleiben, sodass wir durch einen erneuten Klick die Auswahl aufheben können
+			// Das aktive Token von Player 1 soll aktiv bleiben, sodass wir durch einen erneuten Klick die Auswahl aufheben kï¿½nnen
 			tokenClick.setDisable(false);
 			
-			// Sobald ein Token gewählt ist, sollen die Felder aktiviert werden
+			// Sobald ein Token gewï¿½hlt ist, sollen die Felder aktiviert werden
 			for(Feld_Button f1: game_View.getSpielfelder()){
 				f1.setOnAction((feldClicker)->{
 					
-				// Ist das erste Feld, welches wir ankliken, kann nicht rückgängig gemacht werden
+				// Ist das erste Feld, welches wir ankliken, kann nicht rï¿½ckgï¿½ngig gemacht werden
 				Feld_Button feldClick = (Feld_Button) feldClicker.getSource(); 
 				
 				// Unser Token wird auf das richtige Feld gesetzt. Die Attribute, Zeile, Spalte, Nummer werden alle aktualisiert. Das Feld ist nun besetzt. Das alte Feld wird frei.
@@ -116,17 +116,17 @@ public class Game_Controller extends Application {
 				p2.setDisable(true);
 				}
 			
-			// Alle möglichen Felder für Player 1 sollen aktiv werden
+			// Alle mï¿½glichen Felder fï¿½r Player 1 sollen aktiv werden
 			game_View.setSpielfelder(game_Model.getPossibleFieldsP2(tokenClick, game_View.getSpielfelder()));
 
-			// Das aktive Token von Player 1 soll aktiv bleiben, sodass wir durch einen erneuten Klick die Auswahl aufheben können
+			// Das aktive Token von Player 1 soll aktiv bleiben, sodass wir durch einen erneuten Klick die Auswahl aufheben kï¿½nnen
 			tokenClick.setDisable(false);
 			
-			// Sobald ein Token gewählt ist, sollen die Felder aktiviert werden
+			// Sobald ein Token gewï¿½hlt ist, sollen die Felder aktiviert werden
 			for(Feld_Button f1: game_View.getSpielfelder()){
 				f1.setOnAction((feldClicker)->{
 					
-				// Ist das erste Feld, welches wir ankliken, kann nicht rückgängig gemacht werden
+				// Ist das erste Feld, welches wir ankliken, kann nicht rï¿½ckgï¿½ngig gemacht werden
 				Feld_Button feldClick = (Feld_Button) feldClicker.getSource(); 
 				
 				// Unser Token wird auf das richtige Feld gesetzt. Die Attribute, Zeile, Spalte, Nummer werden alle aktualisiert. Das Feld ist nun besetzt. Das alte Feld wird frei.

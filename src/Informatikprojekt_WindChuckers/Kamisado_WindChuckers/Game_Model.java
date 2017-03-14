@@ -19,7 +19,7 @@ public class Game_Model {
 	protected static int lastWinner = 0;
 	
 
-	// Wir holen 8 Felder pro Farbe und füllen diese in der richtigen Reihenfolge in ein Array ab
+	// Wir holen 8 Felder pro Farbe und fuellen diese in der richtigen Reihenfolge in ein Array ab
 	protected Feld_Button[] getFelder(){
 		
 		Queue<Feld_Button> orange = new LinkedList<Feld_Button>();
@@ -34,8 +34,8 @@ public class Game_Model {
 		gelb = this.getGelbeFelder();
 		Queue<Feld_Button> rot = new LinkedList<Feld_Button>();
 		rot = this.getRoteFelder();
-		Queue<Feld_Button> grün = new LinkedList<Feld_Button>();
-		grün = this.getGrüneFelder();
+		Queue<Feld_Button> gruen = new LinkedList<Feld_Button>();
+		gruen = this.getGrueneFelder();
 		Queue<Feld_Button> braun = new LinkedList<Feld_Button>();
 		braun = this.getBrauneFelder();
 
@@ -101,15 +101,15 @@ public class Game_Model {
 		Felder[55]=rot.poll();
 		Felder[58]=rot.poll();
 		
-		// grün
-		Felder[6]=grün.poll();
-		Felder[11]=grün.poll();
-		Felder[16]=grün.poll();
-		Felder[29]=grün.poll();
-		Felder[34]=grün.poll();
-		Felder[47]=grün.poll();
-		Felder[52]=grün.poll();
-		Felder[57]=grün.poll();
+		// gruen
+		Felder[6]=gruen.poll();
+		Felder[11]=gruen.poll();
+		Felder[16]=gruen.poll();
+		Felder[29]=gruen.poll();
+		Felder[34]=gruen.poll();
+		Felder[47]=gruen.poll();
+		Felder[52]=gruen.poll();
+		Felder[57]=gruen.poll();
 		
 		// braun
 		Felder[7]=braun.poll();
@@ -131,7 +131,7 @@ public class Game_Model {
 		return Felder;
 			}
 	
-	// Die Spielfiguren von Player 1 werden in einem Array zurückgeben	
+	// Die Spielfiguren von Player 1 werden in einem Array zurueckgeben	
 	protected Token_Button[] getTokensP1(){
 		Token_Button[] tokens1Temp = new Token_Button[Game_Model.anzahlTokensJeSpieler];
 		Token_Button[] tokensP1P2Temp = this.getTokensP1P2();
@@ -144,7 +144,7 @@ public class Game_Model {
 		return tokens1Temp;
 		}
 
-	// Die Spielfiguren von Player 2 werden in einem Array zurückgeben 
+	// Die Spielfiguren von Player 2 werden in einem Array zurueckgeben 
 	protected Token_Button[] getTokensP2(){
 			Token_Button[] tokens2Temp = new Token_Button[Game_Model.anzahlTokensJeSpieler];
 			Token_Button[] tokensP1P2Temp = this.getTokensP1P2();
@@ -184,9 +184,9 @@ public class Game_Model {
 		tokenRot.setStyle(" -fx-background-color: #B22222;");
 		tokensP1P2Temp[5] = tokenRot;
 		
-		Token_Button tokenGrün = new Token_Button("grün");
-		tokenGrün.setStyle(" -fx-background-color: #008000;");
-		tokensP1P2Temp[6] = tokenGrün;
+		Token_Button tokenGruen = new Token_Button("gruen");
+		tokenGruen.setStyle(" -fx-background-color: #008000;");
+		tokensP1P2Temp[6] = tokenGruen;
 		
 		Token_Button tokenBraun = new Token_Button("braun");
 		tokenBraun.setStyle(" -fx-background-color: #8B4513;");
@@ -195,7 +195,7 @@ public class Game_Model {
 		return tokensP1P2Temp;
 					}
 
-	// Hilfmethoden für die einzelnen Felder - pro Farbe werden 8 Felder generiert
+	// Hilfmethoden fuer die einzelnen Felder - pro Farbe werden 8 Felder generiert
 	protected Queue<Feld_Button> getOrangeFelder(){
 		Queue<Feld_Button> orangeFelder= new LinkedList<Feld_Button>();
 		for(int i=0; i <= Game_Model.anzahlFelderJeFarbe; i++){
@@ -260,15 +260,15 @@ public class Game_Model {
 				return roteFelder;
 			
 		}
-	protected Queue<Feld_Button> getGrüneFelder(){
-		Queue<Feld_Button> grüneFelder= new LinkedList<Feld_Button>();
+	protected Queue<Feld_Button> getGrueneFelder(){
+		Queue<Feld_Button> grueneFelder= new LinkedList<Feld_Button>();
 			for(int i=0; i <= Game_Model.anzahlFelderJeFarbe; i++){
-				Feld_Button grünerButton = new Feld_Button("grün");
-				grünerButton.setStyle(" -fx-background-color: #008000;");
-				grünerButton.setId("spielFelder");
-				grüneFelder.offer(grünerButton);
+				Feld_Button gruenerButton = new Feld_Button("gruen");
+				gruenerButton.setStyle(" -fx-background-color: #008000;");
+				gruenerButton.setId("spielFelder");
+				grueneFelder.offer(gruenerButton);
 			}
-				return grüneFelder;
+				return grueneFelder;
 			
 		}
 	protected Queue<Feld_Button> getBrauneFelder(){
@@ -282,8 +282,8 @@ public class Game_Model {
 			return brauneFelder;
 	}
 
-	// Mit dieser Methode füllen wir das Spielfeld vom View in der richtigen Reihenfolge auf
-	protected GridPane spielfeldFüllen(GridPane spielfeld, Feld_Button[] spielfelder, Token_Button[] tokensP1, Token_Button[] tokensP2) {
+	// Mit dieser Methode fuellen wir das Spielfeld vom View in der richtigen Reihenfolge auf
+	protected GridPane spielfeldFuellen(GridPane spielfeld, Feld_Button[] spielfelder, Token_Button[] tokensP1, Token_Button[] tokensP2) {
 		
 		int counter = 0; 
 		for(int zeile = 1; zeile<=Game_Model.anzahlFelderJeFarbe; zeile++){
@@ -297,7 +297,7 @@ public class Game_Model {
 			}
 		}	
 		
-		// Spielbrett mit Tokens abfüllen ///////////////////////////////////////////////////////////////////////////
+		// Spielbrett mit Tokens abfuellen ///////////////////////////////////////////////////////////////////////////
 		
 		for(int i = 0; i<Game_Model.anzahlFelderJeFarbe;i++){
 			tokensP1[i].setZeile(1);
@@ -322,7 +322,7 @@ public class Game_Model {
 		return spielfeld;
 	}
 
-	// Macht alle möglichen Spielzüge für Player 1 sichtbar
+	// Macht alle möglichen Spielzuege fuer Player 1 sichtbar
 	protected Feld_Button[] getPossibleFieldsP1(Token_Button token_Button, Feld_Button[] spielfeld) {
 
 		// Zuerst deaktivieren wir alle Felder
@@ -330,7 +330,7 @@ public class Game_Model {
 			F.setDisable(true);
 		}
 		
-		// Wir aktivieren alle Felder, welche für einen Vorwärtszug erlaubt sind
+		// Wir aktivieren alle Felder, welche fuer einen Vorwärtszug erlaubt sind
 		for(int i = token_Button.getNumber(); i<Game_Model.anzahlFelderTotal; i++){
 			if(spielfeld[i].isEmpty() && spielfeld[i].getNumber()>token_Button.getNumber() && spielfeld[i].getSpalte()==token_Button.getSpalte()){
 				spielfeld[i].setDisable(false);
@@ -339,7 +339,7 @@ public class Game_Model {
 			}
 		}
 	
-		// Wir aktivieren alle Felder, welche für einen Diagonalzug erlaubt sind
+		// Wir aktivieren alle Felder, welche fuer einen Diagonalzug erlaubt sind
 		
 		// Diagonal nach rechts unten
 		outerloop:
@@ -367,7 +367,7 @@ public class Game_Model {
 		return spielfeld;
 	}
 
-	// Macht alle möglichen Spielzüge für Player 2 sichtbar
+	// Macht alle möglichen Spielzuege fuer Player 2 sichtbar
 	protected Feld_Button[] getPossibleFieldsP2(Token_Button token_Button, Feld_Button[] spielfeld) {
 		
 		// Zuerst deaktivieren wir alle Felder
@@ -375,7 +375,7 @@ public class Game_Model {
 			F.setDisable(true);
 		}
 		
-		// Wir aktivieren alle Felder, welche für einen Vorwärtszug erlaubt sind
+		// Wir aktivieren alle Felder, welche fuer einen Vorwärtszug erlaubt sind
 		for(int i = token_Button.getNumber(); i>=0; i--){
 			if(spielfeld[i].isEmpty() && spielfeld[i].getNumber()<token_Button.getNumber() && spielfeld[i].getSpalte()==token_Button.getSpalte()){
 				spielfeld[i].setDisable(false);
@@ -384,7 +384,7 @@ public class Game_Model {
 			}
 		}
 	
-		// Wir aktivieren alle Felder, welche für einen Diagonalzug erlaubt sind
+		// Wir aktivieren alle Felder, welche fuer einen Diagonalzug erlaubt sind
 		
 		// Diagonal nach link oben
 		outerloop:
@@ -433,7 +433,7 @@ public class Game_Model {
 		// Das neue Feld soll besetzt sein
 		feldClick.setEmpty(false);
 		
-		// Prüfen, ob das Token die letzte Zeile erreicht hat und der Player gewonnen hat
+		// Pruefen, ob das Token die letzte Zeile erreicht hat und der Player gewonnen hat
 		if(this.getPlayer1().isOnTurn()){
 			if(feldClick.getZeile()==8){
 				tokenClick.setDisable(true);

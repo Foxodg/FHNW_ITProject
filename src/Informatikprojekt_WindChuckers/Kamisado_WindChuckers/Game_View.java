@@ -39,7 +39,7 @@ public class Game_View {
 	// GameScene
 	private Scene sceneGame;
 	private BorderPane borderpaneGame;
-	private Button hauptmenü;
+	private Button hauptmenue;
 	private VBox leftGameVBox;
 	private VBox rightGameVBox;
 	private HBox bottomGameHBox;
@@ -72,7 +72,7 @@ public class Game_View {
 	this.game_Model = game_Model;		
 	primaryStage.setTitle("Kamisado_WindChuckers");
 	
-	// Menubar - für alle Scenes
+	// Menubar - fuer alle Scenes
 	this.setMenubar(new MenuBar());
 	this.getMenubar().prefWidthProperty().bind(primaryStage.widthProperty());
 	
@@ -90,7 +90,7 @@ public class Game_View {
 	tokensP1 = game_Model.getTokensP1();
 	tokensP2= game_Model.getTokensP2();
 	spielfeld = new GridPane();
-	spielfeld = game_Model.spielfeldFüllen(spielfeld,spielfelder,tokensP1,tokensP2);
+	spielfeld = game_Model.spielfeldFuellen(spielfeld,spielfelder,tokensP1,tokensP2);
 	spielfeld.setAlignment(Pos.CENTER);
 	spielfeld.setPadding(new Insets(50,0,0,0));
 		
@@ -102,10 +102,10 @@ public class Game_View {
 	rightGameVBox = new VBox();
 	bottomGameHBox = new HBox();
 	
-	this.setButtonHauptmenü(new Button("Hauptmenü"));
-	this.getButtonHauptmenü().setId("buttonMenu");
-	bottomGameHBox.getChildren().add(getButtonHauptmenü());
-	this.getButtonHauptmenü().setAlignment(Pos.CENTER);
+	this.setButtonHauptmenue(new Button("Hauptmenue"));
+	this.getButtonHauptmenue().setId("buttonMenu");
+	bottomGameHBox.getChildren().add(getButtonHauptmenue());
+	this.getButtonHauptmenue().setAlignment(Pos.CENTER);
 	bottomGameHBox.setAlignment(Pos.CENTER);
 	bottomGameHBox.setPadding(new Insets(50,0,50,0));
 	
@@ -152,7 +152,7 @@ public class Game_View {
 	rightStartVBox = new VBox();
 	bottomStartHBox = new HBox();
 			
-	textStartseite = new Label ("Herzlich Willkommen\nWas möchten Sie tun?");
+	textStartseite = new Label ("Herzlich Willkommen\nWas mÃ¶chten Sie tun?");
 	textStartseite.setId("textStartseite"); 
 	textStartseite.setTextAlignment(TextAlignment.CENTER);
 	centerStartHBox.getChildren().add(textStartseite);
@@ -264,13 +264,13 @@ public class Game_View {
 	}
 
 
-	public Button getButtonHauptmenü() {
-		return hauptmenü;
+	public Button getButtonHauptmenue() {
+		return hauptmenue;
 	}
 
 
-	public void setButtonHauptmenü(Button hauptmenü) {
-		this.hauptmenü = hauptmenü;
+	public void setButtonHauptmenue(Button hauptmenue) {
+		this.hauptmenue = hauptmenue;
 	}
 
 
