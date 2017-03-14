@@ -1,0 +1,92 @@
+/* Buttons dynamisch wachsen lassen */
+
+#buttonPlay, #buttonMenu, #buttonRevanche {
+		 -fx-background-color:
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+    -fx-padding: 15 30 15 30;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);   
+}
+
+#spielFelder:hover{
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,10,10) , 20, 0.0 , 0 , 1 );
+}
+
+#spielFelder{
+	-fx-pref-height:80px;
+    -fx-pref-width:80px;
+}
+
+#spielFelder:disabled{
+	-fx-pref-height:80px;
+    -fx-pref-width:80px;
+    -fx-opacity: 0.4;
+}
+
+
+#tokensP1:hover, #tokensP2:hover{
+	-fx-pref-height:50px;
+    -fx-pref-width:50px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 20, 0.0 , 0 , 1 );
+	
+}
+
+#tokensP1, #tokensP2{
+	-fx-border-color: #FFFFFF; 
+	-fx-background-radius: 40;
+	-fx-border-radius: 40;
+	-fx-pref-height:40px;
+    -fx-pref-width:40px;
+    -fx-border-width: 5px
+	
+}
+
+#tokensP2{
+	-fx-border-color: #000000; 
+  	-fx-background-radius: 40;
+	-fx-border-radius: 40;
+	-fx-pref-height:40px;
+    -fx-pref-width:40px;
+    -fx-border-width: 5px
+	
+}
+
+.menu-bar{
+	-fx-font-size: 15pt;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 10;
+    -fx-background-color:linear-gradient(#777777 0%, #606060 50%, #505250 75%, #2a2b2a 100%);
+}
+
+.menu .label{     
+	-fx-text-fill: #ffffff;
+}
+
+.context-menu .label{
+	-fx-text-fill: black;
+}
+
+#textStartseite{
+	-fx-font-size: 30pt;
+}
+#labelRevanche{
+	-fx-font-size: 16pt;
+	-fx-padding: 15 30 15 30;
+}
+
+#borderpaneStart, #borderpaneGame{
+	-fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+       
+}
